@@ -1,0 +1,27 @@
+{
+  "name": "heyitsme.fyi",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "node_modules/.bin/webpack",
+    "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0"
+  },
+  "author": "Edward Allen <me@heyitsme.fyi>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha1",
+    "feather-icons": "^4.28.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "serve": "^11.3.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

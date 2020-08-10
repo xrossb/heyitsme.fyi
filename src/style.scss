@@ -1,0 +1,35 @@
+$theme-colors: (
+    "primary":    #61afef,
+    "secondary":  #5c6370,
+    "success":    #98c379,
+    "info":       #e5c07b,
+    "warning":    #e5c07b,
+    "danger":     #e06c75,
+    "light":      #dcdfe4,
+    "dark":       #282c34
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+    height: 100%;
+}
+
+.icons {
+    @extend .row;
+    @extend .justify-content-center;
+}
+
+.icons a {
+    @extend .col-auto;
+    @extend .text-white;
+    @extend .py-2;
+}
+
+.icons a:hover {
+    @extend .text-white-50
+}
+
+.icons a * {
+    pointer-events: none;
+}
