@@ -2,7 +2,6 @@ import './style.scss';
 
 import * as feather from 'feather-icons';
 import * as bootstrap from 'bootstrap';
-import * as popper from 'popper.js';
 
 window.onload = () => {
     feather.replace();
