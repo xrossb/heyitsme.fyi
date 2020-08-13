@@ -37,6 +37,8 @@ jobs:
       AWS_REGION: ${{ secrets.AWS_REGION }}
       DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
     steps:
+    - uses: actions/checkout@v2
+
     - name: Download build artifacts
       uses: actions/download-artifact@v2
       with:
