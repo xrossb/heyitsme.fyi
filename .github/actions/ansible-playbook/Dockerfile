@@ -9,4 +9,8 @@ RUN apk add --no-cache \
 
 RUN pip3 install boto3 boto botocore
 
+ENV PY_COLORS=1
+ENV ANSIBLE_FORCE_COLOR=1
+ENV ANSIBLE_STDOUT_CALLBACK=yaml
+
 ENTRYPOINT ["ansible-playbook"]
