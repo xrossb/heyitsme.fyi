@@ -3,25 +3,20 @@
   hosts: localhost
   vars:
     domain_name: "{{ lookup('env', 'DOMAIN_NAME') }}"
-    bucket_policy: |
-      {
-        "Version": "2012-10-17",
-        "Statement": [
-          {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::{{ domain_name }}/*"
-          }
-        ]
-      }
+    bucket_policy:
+      Version: 2012-10-17
+      Statement:
+      - Sid: PublicReadGetObject
+        Effect: Allow
+        Principal: "*"
+        Action: s3:GetObject
+        Resource: arn:aws:s3:::{{ domain_name }}/*
   tasks:
   - name: Primary bucket | Create
     s3_bucket:
       name: "{{ domain_name }}"
       state: present
-      policy: "{{ bucket_policy }}"
+      policy: "{{ bucket_policy | to_json }}"
 
   - name: Primary bucket | Sync
     s3_sync:
