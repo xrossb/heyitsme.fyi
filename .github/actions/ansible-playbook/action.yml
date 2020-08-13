@@ -1,0 +1,11 @@
+name: ansible-playbook
+description: Run an Ansible playbook
+inputs:
+  playbook:
+    description: Playbook to run
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.playbook }}
