@@ -26,6 +26,8 @@ jobs:
         name: dist
         path: dist
 
+    - run: ls -la dist
+
   deploy:
     name: Deploy to S3
     runs-on: ubuntu-latest
@@ -43,10 +45,11 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: dist
+        path: dist
 
     - run: ls -la dist
 
-    - name: Run Ansible playbook
-      uses: ./.github/actions/ansible-playbook
-      with:
-        playbook: deploy/deploy-to-s3.yml
+    # - name: Run Ansible playbook
+    #   uses: ./.github/actions/ansible-playbook
+    #   with:
+    #     playbook: deploy/deploy-to-s3.yml
