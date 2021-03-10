@@ -1,11 +1,11 @@
 import './style.scss';
 
-import * as feather from 'feather-icons';
-import * as bootstrap from 'bootstrap';
+import { replace } from 'feather-icons';
+import { Tooltip } from 'bootstrap';
 
 window.onload = () => {
-    feather.replace();
+    replace();
 
     let elements = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
-    elements.map((el) => new bootstrap.Tooltip(el));
+    elements.map((el) => new Tooltip(el));
 };

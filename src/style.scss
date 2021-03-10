@@ -15,6 +15,10 @@ html, body {
     height: 100%;
 }
 
+.container {
+    --bs-gutter-x: 1rem;
+}
+
 .icons {
     @extend .row;
     @extend .justify-content-center;
