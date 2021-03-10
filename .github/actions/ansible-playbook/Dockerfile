@@ -1,9 +1,9 @@
 FROM alpine
 
-ENV ANSIBLE_VERSION=2.9.9
+ENV ANSIBLE_VERSION=2.10.6-r0
 
 RUN apk add --no-cache \
-    ansible=${ANSIBLE_VERSION}-r0 \
+    ansible=${ANSIBLE_VERSION} \
     python3-dev py3-pip openssl-dev \
     libffi-dev libc-dev gcc
 
