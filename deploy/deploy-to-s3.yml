@@ -24,6 +24,7 @@
       file_root: ../dist
       file_change_strategy: checksum
       permission: public-read
+      delete: yes
 
   - name: Primary bucket | Configure website
     s3_website:
