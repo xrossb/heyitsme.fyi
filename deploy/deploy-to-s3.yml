@@ -22,7 +22,6 @@
     s3_sync:
       bucket: "{{ domain_name }}"
       file_root: ../dist
-      file_change_strategy: checksum
       permission: public-read
       delete: yes
 
